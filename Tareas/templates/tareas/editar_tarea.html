@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Editar Tarea{% endblock %}
+
+{% block tituloNav %}Editar Tarea{% endblock %}
+
+{% block Contenido %}
+    <h1>Editar Tarea</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            {{ form.titulo }}
+        </div>
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            {{ form.descripcion }}
+        </div>
+        <div class="mb-3">
+            <label for="completada" class="form-label">Completada</label>
+            {{ form.completada }}
+        </div>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+        <a href="{% url 'Listado' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}

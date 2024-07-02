@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Detalle de Tarea{% endblock %}
+
+{% block Contenido %}
+    <h1>Detalle de Tarea</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ tarea.titulo }}</h5>
+            <p class="card-text">{{ tarea.descripcion }}</p>
+            <p class="card-text">
+                <small class="text-muted">Creada: {{ tarea.creada|date:"d M Y H:i" }}</small><br>
+                <small class="text-muted">Actualizada: {{ tarea.actualizada|date:"d M Y H:i" }}</small><br>
+                <small class="text-muted">Estado: {% if tarea.completada %}Completada{% else %}Pendiente{% endif %}</small>
+            </p>
+            {% if not tarea.completada %}
+            <a href="{% url 'Editar' tarea.id %}" class="btn btn-warning">Editar</a>
+            {% endif %}
+            <a href="{% url 'Eliminar' tarea.id %}" class="btn btn-danger">Eliminar</a>
+            <a href="{% url 'Listado' %}" class="btn btn-secondary">Volver a la lista</a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Completar Tarea{% endblock %}
+
+{% block Contenido %}
+    <h1>Completar Tarea</h1>
+    <form method="post">
+        {% csrf_token %}
+        <p>¿Estás seguro de que quieres marcar esta tarea como completada?</p>
+        <button type="submit" class="btn btn-primary">Sí</button>
+        <a href="{% url 'Listado' %}" class="btn btn-secondary">No</a>
+    </form>
+{% endblock %}
