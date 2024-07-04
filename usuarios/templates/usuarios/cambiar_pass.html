@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Cambiar Password{% endblock %}
+
+{% block tituloNav %}Cambiar Password{% endblock %}
+
+{% block Contenido %}
+    <form action={% url "CambiarPass" %} method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <a href="{% url 'Editar' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}

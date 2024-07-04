@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Editar perfil{% endblock %}
+
+{% block tituloNav %}Editar perfil{% endblock %}
+
+{% block Contenido %}
+    <form action={% url "Editar" %} method="post" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {{formulario}}
+        <button type="submit" class="btn btn-primary">Editar</button>
+        <a href="{% url 'Listado' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+
+    <a class = "btn btn-primary" href="{% url 'CambiarPass' %}">Cambiar Password</a>
+{% endblock %}

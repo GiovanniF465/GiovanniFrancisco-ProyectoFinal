@@ -8,7 +8,7 @@ class Tarea(models.Model):
     completada = models.BooleanField(default=False)
     creada = models.DateTimeField(auto_now_add=True)
     actualizada = models.DateTimeField(auto_now=True)
-    #usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'Soy la tarea {self.titulo} con descripcion {self.descripcion}'

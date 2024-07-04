@@ -1,18 +1,18 @@
 from django.urls import path
 from .views import (
-    TareaListView, 
-    TareaDetailView, 
-    TareaCreateView, 
-    TareaUpdateView, 
-    TareaCompleteView,
-    TareaDeleteView
+    ListadoTareaView, 
+    DetalleTareaView, 
+    CrearTareaView, 
+    ActualizarTareaView, 
+    CompletarTareaView,
+    EliminarTareaView
 )
 
 urlpatterns = [
-    path('', TareaListView.as_view(), name='Listado'),
-    path('tarea/<int:pk>/', TareaDetailView.as_view(), name='Detalles'),
-    path('nueva_tarea/', TareaCreateView.as_view(), name='Nueva'),
-    path('editar_tarea/<int:pk>/', TareaUpdateView.as_view(), name='Editar'),
-    path('completar/<int:pk>/', TareaCompleteView.as_view(), name='Completar'),
-    path('eliminar/<int:pk>/', TareaDeleteView.as_view(), name='Eliminar'),
+    path('', ListadoTareaView.as_view(), name='Listado'),
+    path('tarea/<int:pk>/', DetalleTareaView.as_view(), name='Detalles'),
+    path('nueva_tarea/', CrearTareaView.as_view(), name='Nueva'),
+    path('editar_tarea/<int:pk>/', ActualizarTareaView.as_view(), name='Editar'),
+    path('completar/<int:pk>/', CompletarTareaView.as_view(), name='Completar'),
+    path('eliminar/<int:pk>/', EliminarTareaView.as_view(), name='Eliminar'),
 ]
