@@ -2,6 +2,10 @@
 
 Este proyecto es un sistema de gestión de tareas desarrollado con Django. Permite a los usuarios crear, actualizar, eliminar y marcar tareas como completadas. Además, incluye funcionalidades de autenticación y gestión de perfiles de usuario.
 
+## Link al video de la presentación del proyecto
+
+https://cognitives-my.sharepoint.com/:v:/g/personal/giovanni_francisco_cognitive_mx/EVSii_xwxd1Gp42B0RzIjLgBBA8b-WmCdQnpt6Spz3eOnA?e=OWXpCZ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
 ## Estructura del Proyecto
 
 ### base.html
