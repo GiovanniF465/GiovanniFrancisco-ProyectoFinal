@@ -8,7 +8,7 @@
     <form action={% url "Editar" %} method="post" enctype='multipart/form-data'>
         {% csrf_token %}
         {{formulario}}
-        <button type="submit" class="btn btn-primary">Editar</button>
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
         <a href="{% url 'Listado' %}" class="btn btn-secondary">Cancelar</a>
     </form>
 
